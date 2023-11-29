@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>auth-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>AuthService</name>
     <description>Auth Service</description>
     <properties>
@@ -101,7 +101,7 @@
                         <image>eclipse-temurin:17-jre-alpine</image>
                     </from>
                     <to>
-                        <image>${project.artifactId}</image>
+                        <image>docker.io/soumiknandi/${project.artifactId}</image>
                     </to>
                 </configuration>
             </plugin>
