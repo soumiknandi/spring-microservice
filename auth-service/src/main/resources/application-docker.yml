@@ -1,0 +1,9 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-registry:8761/eureka
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:password@mongo-db/
+      database: micro-auth

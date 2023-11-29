@@ -1,0 +1,65 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: API-GATEWAY
+
+  cloud:
+    gateway:
+#      default-filters:
+#        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: MOVIE-SERVICE
+          uri: lb://MOVIE-SERVICE
+          predicates:
+            - Path=/api/movie/**, /movie/api-docs
+        - id: ARTIST-SERVICE
+          uri: lb://ARTIST-SERVICE
+          predicates:
+            - Path=/api/artist/**, /artist/api-docs
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**, /auth/api-docs
+        - id: SERVICE-REGISTRY
+          uri: lb://SERVICE-REGISTRY
+          predicates:
+            - Path=/eurekawebui/**,/eureka/**
+
+  main:
+    allow-bean-definition-overriding: true
+    web-application-type: reactive
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+JWT_SECRET: fc7a475d5149656a5f72b3a19dbf9da7d5e0dc50904dddc7445c846320e2911b
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    urls:
+      - name: artist-service
+        display-name: Artist Service
+        url: /artist/api-docs
+      - name: movie-service
+        display-name: Movie Service
+        url: /movie/api-docs
+      - name: auth-service
+        display-name: Auth Service
+        url: /auth/api-docs
+    enabled: true
+    path: /swagger-ui.html

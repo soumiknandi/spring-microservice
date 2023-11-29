@@ -1,0 +1,84 @@
+version: '3.7'
+services:
+  # Maria DB Movie
+  maria-db-movie:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: movie
+    volumes:
+      - ./mariadb-data-movie/:/var/lib/mysql
+
+  # Maria DB Movie
+  maria-db-artist:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: artist
+    volumes:
+      - ./mariadb-data-artist/:/var/lib/mysql
+
+  # Mongo DB Auth
+  mongo-db:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - ./mongodb-data:/data/db
+
+  # Eureka Server
+  service-registry:
+    image: service-registry:latest
+#    container_name: service-registry
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  # API Gateway
+  api-gateway:
+    image: api-gateway:latest
+#    container_name: api-gateway
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - spring.api.username=user
+      - spring.api.password=password
+    ports:
+      - "8090:8090"
+    expose:
+      - "8090"
+    depends_on:
+      - service-registry
+
+  # Auth Service
+  auth-service:
+    image: auth-service:latest
+#    container_name: auth-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    deploy:
+      mode: replicated
+      replicas: 2
+    depends_on:
+      - mongo-db
+      - api-gateway
+
+  # Movie Service
+  movie-service:
+    image: movie-service:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - maria-db-movie
+      - api-gateway
+      - auth-service
+
+  # Artist Service
+  artist-service:
+    image: artist-service:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - maria-db-artist
+      - api-gateway
+      - auth-service
+

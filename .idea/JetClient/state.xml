@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="id" value="1176331f-5ba9-4990-b864-936a4fdedcb4" />
+          <option name="name" value="Artist" />
+          <option name="requests">
+            <list>
+              <requestState>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Authorization" />
+                      <option name="value" value="Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJTb3VtaWsiLCJsYXN0TmFtZSI6Ik5hbmRpIiwic3ViIjoic291bWlrQHRlc3QuY29tIiwiaWF0IjoxNzAxMDI0NDkxLCJleHAiOjE3MDEwMjU5MzF9.oVol_RMmYilnMZpGbofQ1tX2I9HvS20alH4rwRymkko" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="8cd3e5cf-fdbb-48f4-b69a-4e2f5bdafbbc" />
+                <option name="method" value="GET" />
+                <option name="name" value="Get all artist" />
+                <option name="url" value="http://localhost:8090/api/artist" />
+              </requestState>
+              <requestState>
+                <option name="id" value="f22c7be9-a7eb-43b0-af8c-c11f2fb838f3" />
+                <option name="method" value="GET" />
+                <option name="name" value="Get a artist" />
+                <option name="url" value="http://localhost:8090/api/artist/1" />
+              </requestState>
+              <requestState>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&#10;  &quot;firstName&quot;: &quot;Swagata&quot;,&#10;  &quot;lastName&quot;: &quot;Nandi&quot;,&#10;  &quot;gender&quot;: &quot;female&quot;&#10;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                    <headerState>
+                      <option name="key" value="Authorization" />
+                      <option name="value" value="Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJTb3VtaWsiLCJsYXN0TmFtZSI6Ik5hbmRpIiwic3ViIjoic291bWlrQHRlc3QuY29tIiwiaWF0IjoxNzAxMDA1OTE3LCJleHAiOjE3MDEwMDczNTd9.ZG66GEyxJiRYCuGzzxJxATYj99sQGrHN6A2nUNlAsew" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="2c129453-a463-4f1d-a063-a897d88a2c9c" />
+                <option name="method" value="POST" />
+                <option name="name" value="Add artist" />
+                <option name="url" value="http://localhost:8090/api/artist" />
+              </requestState>
+            </list>
+          </option>
+          <option name="sortWeight" value="500000" />
+        </folderState>
+        <folderState>
+          <option name="id" value="4f7f9c88-f204-4d7c-b4cd-991a9984f5e6" />
+          <option name="name" value="Movie" />
+          <option name="requests">
+            <list>
+              <requestState>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Authorization" />
+                      <option name="value" value="Bearer eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdE5hbWUiOiJTb3VtaWsiLCJsYXN0TmFtZSI6Ik5hbmRpIiwic3ViIjoic291bWlrQHRlc3QuY29tIiwiaWF0IjoxNzAxMTkxNjA4LCJleHAiOjE3MDExOTMwNDh9.9-zjqLDiQnJpt-ai_Jnvx_urS4iZgkENR5HxWSk_oA8" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="48b77d3a-470d-440c-b066-cd768dec27ac" />
+                <option name="method" value="GET" />
+                <option name="name" value="Get all movies" />
+                <option name="url" value="http://localhost:8090/api/movie/" />
+              </requestState>
+              <requestState>
+                <option name="id" value="b4f760dc-fc55-4ddb-a04c-5686baa7a33f" />
+                <option name="method" value="GET" />
+                <option name="name" value="Get a movie by id" />
+                <option name="url" value="http://localhost:8090/api/movie/1" />
+              </requestState>
+              <requestState>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&#10;  &quot;fullName&quot;: &quot;Movie 9&quot;,&#10;  &quot;language&quot;: &quot;Test&quot;,&#10;  &quot;artistIds&quot;: [53,1]&#10;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="2f9d3923-bda9-451b-a583-6332ace1e5d6" />
+                <option name="method" value="POST" />
+                <option name="name" value="Add Movie" />
+                <option name="url" value="http://localhost:8090/api/movie" />
+              </requestState>
+              <requestState>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&#10;  &quot;fullName&quot;: &quot;Updated Movie 1&quot;,&#10;  &quot;language&quot;: &quot;Updated Language 1&quot;&#10;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="35a2fb3b-9627-4939-b0b5-e9723df0b2b0" />
+                <option name="method" value="PUT" />
+                <option name="name" value="Update Movie" />
+                <option name="url" value="http://localhost:8090/api/movie/1" />
+              </requestState>
+              <requestState>
+                <option name="body">
+                  <bodyState>
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="d2bdf0f8-cb76-4456-9821-02d9df241012" />
+                <option name="method" value="DELETE" />
+                <option name="name" value="Delete Movie" />
+                <option name="url" value="http://localhost:8090/api/movie/1" />
+              </requestState>
+            </list>
+          </option>
+          <option name="sortWeight" value="1000000" />
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="folderPath" value="$PROJECT_DIR$/.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+        <folderState>
+          <option name="id" value="dfa1573e-eec4-4073-a67a-544897fc4300" />
+          <option name="name" value="Test" />
+          <option name="requests">
+            <list>
+              <requestState>
+                <option name="id" value="0d2b8737-afa0-4711-b5fe-5d967a57ee4d" />
+                <option name="method" value="GET" />
+                <option name="name" value="New Request" />
+                <option name="queryParams">
+                  <list>
+                    <queryParamState>
+                      <option name="key" value="lat" />
+                      <option name="value" value="22" />
+                    </queryParamState>
+                    <queryParamState>
+                      <option name="key" value="lon" />
+                      <option name="value" value="88" />
+                    </queryParamState>
+                    <queryParamState>
+                      <option name="key" value="appid" />
+                      <option name="value" value="2346fa4d5f6c0ab93c816ece6193746a" />
+                    </queryParamState>
+                  </list>
+                </option>
+                <option name="url" value="http://api.openweathermap.org/data/2.5/air_pollution?lat=22&amp;lon=88&amp;appid=2346fa4d5f6c0ab93c816ece6193746a" />
+              </requestState>
+              <requestState>
+                <option name="id" value="f4804141-d218-4ff0-ab61-05320fa98253" />
+                <option name="method" value="GET" />
+                <option name="name" value="New Request 1" />
+                <option name="queryParams">
+                  <list>
+                    <queryParamState>
+                      <option name="key" value="id" />
+                      <option name="value" value="2950159" />
+                    </queryParamState>
+                    <queryParamState>
+                      <option name="key" value="cnt" />
+                      <option name="value" value="5" />
+                    </queryParamState>
+                    <queryParamState>
+                      <option name="key" value="units" />
+                      <option name="value" value="metric" />
+                    </queryParamState>
+                    <queryParamState>
+                      <option name="key" value="lang" />
+                      <option name="value" value="en" />
+                    </queryParamState>
+                    <queryParamState>
+                      <option name="key" value="appid" />
+                      <option name="value" value="2346fa4d5f6c0ab93c816ece6193746a" />
+                    </queryParamState>
+                  </list>
+                </option>
+                <option name="url" value="http://api.openweathermap.org/data/2.5/weather?id=2950159&amp;cnt=5&amp;units=metric&amp;lang=en&amp;appid=2346fa4d5f6c0ab93c816ece6193746a" />
+              </requestState>
+              <requestState>
+                <option name="id" value="4e497273-6a44-462a-9f60-c5f26334daff" />
+                <option name="method" value="GET" />
+                <option name="name" value="New Request" />
+                <option name="url" value="http://localhost:8081/api/movie/artist/52" />
+              </requestState>
+            </list>
+          </option>
+          <option name="sortWeight" value="2000000" />
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="folderPath" value="$PROJECT_DIR$/.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+        <folderState>
+          <option name="id" value="303c84f5-8e98-4452-89b2-abf7d6d86027" />
+          <option name="name" value="Auth" />
+          <option name="requests">
+            <list>
+              <requestState>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&#10;  &quot;firstName&quot; : &quot;Soumik&quot;,&#10;  &quot;lastName&quot;: &quot;Nandi&quot;,&#10;  &quot;email&quot; : &quot;soumik@test.com&quot;,&#10;  &quot;password&quot; : &quot;12345&quot;&#10;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="70dd9235-ba38-4225-a344-775976e3f25c" />
+                <option name="method" value="POST" />
+                <option name="name" value="Register" />
+                <option name="url" value="http://localhost:8090/api/auth/register" />
+              </requestState>
+              <requestState>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&#10;  &quot;email&quot; : &quot;soumik@test.com&quot;,&#10;  &quot;password&quot; : &quot;12345&quot;&#10;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                    <headerState>
+                      <option name="disabled" value="true" />
+                      <option name="key" value="Authorization" />
+                      <option name="value" value="1234" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="3e5ad210-8f13-4434-99c8-db072a4bc1b9" />
+                <option name="method" value="POST" />
+                <option name="name" value="Login" />
+                <option name="url" value="http://localhost:8090/api/auth/login" />
+              </requestState>
+            </list>
+          </option>
+          <option name="sortWeight" value="3000000" />
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="folderPath" value="$PROJECT_DIR$/.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="2658009c-cd2f-4a9f-95da-3c9217d069ef" />
+  </component>
+</project>
