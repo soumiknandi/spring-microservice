@@ -29,14 +29,14 @@ services:
 
   # Eureka Server
   service-registry:
-    image: service-registry:latest
+    image: soumiknandi/service-registry:latest
 #    container_name: service-registry
     environment:
       - SPRING_PROFILES_ACTIVE=docker
 
   # API Gateway
   api-gateway:
-    image: api-gateway:latest
+    image: soumiknandi/api-gateway:latest
 #    container_name: api-gateway
     environment:
       - SPRING_PROFILES_ACTIVE=docker
@@ -51,7 +51,7 @@ services:
 
   # Auth Service
   auth-service:
-    image: auth-service:latest
+    image: soumiknandi/auth-service:latest
 #    container_name: auth-service
     environment:
       - SPRING_PROFILES_ACTIVE=docker
@@ -64,7 +64,7 @@ services:
 
   # Movie Service
   movie-service:
-    image: movie-service:latest
+    image: soumiknandi/movie-service:latest
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
@@ -74,7 +74,7 @@ services:
 
   # Artist Service
   artist-service:
-    image: artist-service:latest
+    image: soumiknandi/artist-service:latest
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
