@@ -9,6 +9,11 @@ resources:
 - databases/auth-service/statefulset.yaml
 - databases/auth-service/service.yaml
 
+- databases/artist-service/pv.yaml
+- databases/artist-service/pvc.yaml
+- databases/artist-service/statefulset.yaml
+- databases/artist-service/service.yaml
+
 - applications/service-registry/deployment.yaml
 - applications/service-registry/service.yaml
 
@@ -20,3 +25,6 @@ resources:
 
 - applications/movie-service/deployment.yaml
 - applications/movie-service/service.yaml
+
+- applications/artist-service/deployment.yaml
+- applications/artist-service/service.yaml

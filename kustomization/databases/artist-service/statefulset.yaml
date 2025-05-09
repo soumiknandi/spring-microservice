@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mariadb-artist-statefulset
+spec:
+  serviceName: mariadb
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mariadb-artist-statefulset
+  template:
+    metadata:
+      labels:
+        app: mariadb-artist-statefulset
+    spec:
+      containers:
+      - name: mariadb-artist-container
+        image: mariadb:latest
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: MYSQL_DATABASE
+          value: artist
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mariadb-artist-persistent-storage
+      volumes:
+      - name: mariadb-artist-persistent-storage
+        persistentVolumeClaim:
+          claimName: mariadb-artist-pvc
