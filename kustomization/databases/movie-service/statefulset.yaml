@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mariadb-movie-statefulset
+spec:
+  serviceName: mariadb
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mariadb-movie-statefulset
+  template:
+    metadata:
+      labels:
+        app: mariadb-movie-statefulset
+    spec:
+      containers:
+      - name: mariadb-movie-container
+        image: mariadb:latest
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: MYSQL_DATABASE
+          value: movie
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mariadb-movie-persistent-storage
+      volumes:
+      - name: mariadb-movie-persistent-storage
+        persistentVolumeClaim:
+          claimName: mariadb-movie-pvc

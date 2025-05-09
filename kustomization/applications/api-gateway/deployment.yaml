@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-gateway-deployment
+  template:
+    metadata:
+      labels:
+        app: api-gateway-deployment
+    spec:
+      containers:
+      - name: soumiknandi-api-gateway
+        image: soumiknandi/api-gateway
+        ports:
+        - containerPort: 8090
+        env:
+        - name : SPRING_PROFILES_ACTIVE
+          value : docker
+        - name : spring.api.username
+          value : user
+        - name : spring.api.password
+          value : password

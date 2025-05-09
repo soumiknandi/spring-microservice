@@ -1,0 +1,22 @@
+resources:
+- databases/movie-service/pv.yaml
+- databases/movie-service/pvc.yaml
+- databases/movie-service/statefulset.yaml
+- databases/movie-service/service.yaml
+
+- databases/auth-service/pv.yaml
+- databases/auth-service/pvc.yaml
+- databases/auth-service/statefulset.yaml
+- databases/auth-service/service.yaml
+
+- applications/service-registry/deployment.yaml
+- applications/service-registry/service.yaml
+
+- applications/api-gateway/deployment.yaml
+- applications/api-gateway/service.yaml
+
+- applications/auth-service/deployment.yaml
+- applications/auth-service/service.yaml
+
+- applications/movie-service/deployment.yaml
+- applications/movie-service/service.yaml
